@@ -199,7 +199,7 @@
     }
   },
   "eslintIgnore": [
-    "node_modules/",
+    "node_modules/"
   ],
   "prettier": {
     "quoteProps": "consistent",
