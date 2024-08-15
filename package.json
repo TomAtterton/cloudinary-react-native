@@ -2,9 +2,6 @@
   "name": "cloudinary-react-native",
   "version": "1.0.0",
   "description": "Cloudinary is a cloud service that offers a solution to a web application's entire image management pipeline. Upload images to the cloud. Automatically perform smart image resizing, cropping and conversion without installing any complex software. Integrate Facebook or Twitter profile image extraction in a snap, in any dimension and style to match your websiteâs graphics requirements. Images are seamlessly delivered through a fast CDN, and much much more. This Java library allows to easily integrate with Cloudinary in Kotlin applications.",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/src/index.d.ts",
   "react-native": {
     "zlib": "browserify-zlib",
     "console": "console-browserify",
@@ -33,12 +30,10 @@
   },
   "source": "src/index",
   "files": [
-    "lib",
     "android",
     "ios",
     "cpp",
     "*.podspec",
-    "!lib/typescript/example",
     "!ios/build",
     "!android/build",
     "!android/gradle",
@@ -150,8 +145,7 @@
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
+      "<rootDir>/example/node_modules"
     ],
     "moduleFileExtensions": [
       "ts",
@@ -206,7 +200,6 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "lib/"
   ],
   "prettier": {
     "quoteProps": "consistent",
@@ -217,7 +210,6 @@
   },
   "react-native-builder-bob": {
     "source": "src",
-    "output": "lib",
     "targets": [
       "commonjs",
       "module",
