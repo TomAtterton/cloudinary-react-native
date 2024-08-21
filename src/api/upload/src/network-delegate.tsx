@@ -5,6 +5,7 @@ async function callApi(request: UploadRequest) {
   try {
     const response = await fetch(request.url, {
       method: 'POST',
+      // @ts-ignore
       headers: request.headers,
       body: request.data,
     },);

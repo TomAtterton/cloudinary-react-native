@@ -1,4 +1,5 @@
 import { APIConfig, apiVersion, defaultResourceType } from '../config/api-config';
+// @ts-ignore
 import { process_request_params } from '../utils';
 import { UploadRequest } from '../model/upload-request';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -41,6 +42,7 @@ function buildUrl({prefix, apiVersion, cloudName, resourceType, action}: UrlPara
 function buildPayload(file: string | undefined, options: UploadApiOptions) {
   const data = new FormData();
   if(file != undefined) {
+    // @ts-ignore
     data.append('file', {name: "file", uri: file, type: setMimeType(options.resource_type)});
   }
 
